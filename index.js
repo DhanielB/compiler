@@ -1,8 +1,10 @@
 const express = require("express");
 const { exec } = require("child_process");
+const timeout = require("connect-timeout");
 
 const app = express();
 
+app.use(timeout('50000000000000s'))
 app.use(express.json());
 app.post("/commands", (req, res) => {
   const { commands } = req.body;
