@@ -1,4 +1,3 @@
-const http = require("http");
 const express = require("express");
 const { exec } = require("child_process");
 
@@ -25,6 +24,6 @@ app.post("/commands", (req, res) => {
   }
 });
 
-http.createServer(app).listen(8080, () => {
+app.listen(8080, () => {
   console.log("Listening at 8080");
 }); 
