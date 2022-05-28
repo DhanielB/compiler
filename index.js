@@ -4,7 +4,7 @@ const timeout = require("connect-timeout");
 
 const app = express();
 
-app.use(timeout('50000000000000s'))
+app.use(timeout('5000s'))
 app.use(express.json());
 app.post("/commands", (req, res) => {
   const { commands } = req.body;
